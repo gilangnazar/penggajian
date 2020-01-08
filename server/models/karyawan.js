@@ -58,7 +58,7 @@ module.exports = function(sequelize, DataTypes) {
             },
             jmlAnak: {
                 type: DataTypes.INTEGER(2),
-                allowNull: false,
+                allowNull: true,
                 comment: "null"
             },
             username: {
@@ -83,7 +83,6 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
         {
-            freezeTableName: true,
             tableName: "karyawan"
         }
     );
