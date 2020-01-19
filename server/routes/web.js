@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
+const gaji = require("../controller/gajiController");
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get("/gaji", gaji.getGaji);
+router.get("/gajifull", gaji.getGajiFull);
 
 module.exports = router;
